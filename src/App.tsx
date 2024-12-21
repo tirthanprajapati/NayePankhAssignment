@@ -7,9 +7,9 @@ import './App.css'; // Add this line to include App CSS
 function App() {
   return (
     <BrowserRouter>
-      <div className="app">
+      <div className="app flex flex-col md:flex-row">
         <Sidebar />
-        <main className="flex-1 ml-64">
+        <main className="flex-1 md:ml-64">
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/transactions" element={<Transactions />} />
