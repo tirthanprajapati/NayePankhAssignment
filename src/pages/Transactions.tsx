@@ -20,19 +20,19 @@ const transactions = [
 
 export function Transactions() {
   return (
-    <div className="p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Transactions</h1>
+    <div className="p-4 md:p-8">
+      <div className="mb-4 md:mb-8">
+        <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Transactions</h1>
         <p className="text-gray-600 mt-2">
           Track all donations made through your referral link
         </p>
       </div>
 
       <div className="bg-white rounded-lg shadow-md">
-        <div className="p-6">
-          <div className="flex items-center space-x-3 mb-6">
+        <div className="p-4 md:p-6">
+          <div className="flex items-center space-x-3 mb-4 md:mb-6">
             <Receipt className="w-5 h-5 text-blue-600" />
-            <h2 className="text-xl font-semibold text-gray-800">Recent Donations</h2>
+            <h2 className="text-lg md:text-xl font-semibold text-gray-800">Recent Donations</h2>
           </div>
 
           <div className="overflow-x-auto">
@@ -48,12 +48,12 @@ export function Transactions() {
               <tbody>
                 {transactions.map((tx) => (
                   <tr key={tx.id} className="border-b border-gray-100">
-                    <td className="py-4">{tx.donor}</td>
-                    <td className="py-4">₹{tx.amount.toLocaleString()}</td>
-                    <td className="py-4">
+                    <td className="py-2 md:py-4">{tx.donor}</td>
+                    <td className="py-2 md:py-4">₹{tx.amount.toLocaleString()}</td>
+                    <td className="py-2 md:py-4">
                       {new Date(tx.date).toLocaleDateString()}
                     </td>
-                    <td className="py-4">
+                    <td className="py-2 md:py-4">
                       <span className="px-2 py-1 text-sm rounded-full bg-green-100 text-green-800">
                         {tx.status}
                       </span>

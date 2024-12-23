@@ -1,0 +1,10 @@
+.dashboard-stats {
+  background-color: #fff;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .dashboard-stats {
+    margin-left: 250px;
+  }
+}
